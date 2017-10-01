@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Edit Data</title>
+</head>
+<body>
+    <h1>Edit Data</h1>
+
+    <form action="edit.html" th:action="@{/edit}" th:object="${user}" method="post">
+        <table>
+            <tr hidden = "true">
+                <td>ID: </td>
+                <td><input type="text" th:field="*{id}" /></td>
+            </tr>
+            <tr>
+                <td>Nama: </td>
+                <td><input type="text" th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td>Usia:</td>
+                <td><input type="text" th:field="*{age}" /></td>
+                <td th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Usia Harus Berisi Angka</td>
+            </tr>
+            <tr>
+                <td>Honor:</td>
+                <td><input type="text" th:field="*{salary}" /></td>
+                <td th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}">Honor Harus Berisi Angka</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><button type="submit">Simpan</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
