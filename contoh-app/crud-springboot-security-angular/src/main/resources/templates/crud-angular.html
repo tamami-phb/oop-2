@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Daftar Pengguna</title>
+
+    <script src="bower_components/jquery/dist/jquery.slim.min.js"></script>
+    <script src="bower_components/popper.js/dist/popper.js"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="/js/angular.min.js"></script>
+
+    <script src="/js/app-controller.js"></script>
+</head>
+<body ng-app="userApp" class="container" >
+
+    <div class="jumbotron">
+        <h1>Daftar User</h1>
+    </div>
+
+
+
+    <div ng-controller="ApiController">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in daftarUser">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td><button class="btn btn-danger" ng-click="hapus(user)">Hapus</button></td>
+                    <td><button class="btn btn-warning" ng-click="ubah(user)">Ubah</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <a class="btn btn-primary" href="/form" role="button">Tambah Asli</a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+</body>
+
+
+</html>

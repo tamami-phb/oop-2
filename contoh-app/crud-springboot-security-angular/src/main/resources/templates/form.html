@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Form Entry Data</title>
+
+    <script src="bower_components/jquery/dist/jquery.slim.min.js"></script>
+    <script src="bower_components/popper.js/dist/popper.js"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/app-controller.js"></script>
+</head>
+
+<body class="container" ng-app="userApp" ng-controller="FormController">
+
+<div class="jumbotron">
+    <h1>Form Entry Data</h1>
+</div>
+
+<form>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">ID</label>
+        <input class="form-control" type="text" placeholder="ID" readonly="true" ng-model="dataUser.id" />
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Nama</label>
+        <input class="form-control" type="text" placeholder="Nama" ng-model="dataUser.name"/>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Usia</label>
+        <input class="form-control" type="text" placeholder="Usia" ng-model="dataUser.age" />
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Honor</label>
+        <input class="form-control" type="text" placeholder="Honor" ng-model="dataUser.salary" />
+    </div>
+    <div class="form-group row">
+        <button class="btn btn-primary" ng-click="simpan()">Simpan</button>
+    </div>
+</form>
+</body>
+</html>

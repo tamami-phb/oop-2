@@ -1,0 +1,11 @@
+# project untuk UTS dan UAS
+
+1. crud buku perpustakaan (id, judul buku, penulis)
+2. crud buku di toko buku (id, judul buku, penulis, harga)
+3. crud parkir motor (id, nopol, waktu parkir)
+4. crud pasien (id, nama, diagnosa, tgl rawat inap)
+5. crud surat masuk (id, tgl surat, tgl terima, judul)
+6. crud surat keluar (id, tgl surat, tgl kirim, tujuan, judul)
+7. crud pegawai (id, nama, jabatan, honor)
+8. crud 
+

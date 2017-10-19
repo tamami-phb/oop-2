@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Test Angular 1</title>
+
+    <script src="bower_components/jquery/dist/jquery.slim.min.js"></script>
+    <script src="bower_components/popper.js/dist/popper.js"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/app-controller.js"></script>
+</head>
+<body ng-app="userApp">
+
+<div ng-controller="UserController" class="container">
+    Nama : <input type="text" ng-model="nama"/>
+    <br/>
+    Selamat datang, {{nama}}
+    <br/>
+    <button class="btn btn-primary" ng-click="tambah()">Tambahkan</button>
+    <br/>
+    <br/>
+
+    User yang telah terdaftar :
+
+    <ul>
+        <li ng-repeat="usr in daftarUser">
+            {{usr}}
+            <button ng-click="hapus(usr)" class="btn btn-danger">Hapus</button>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>
