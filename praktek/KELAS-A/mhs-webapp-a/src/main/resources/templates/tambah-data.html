@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Formulir Entry Data</title>
+    </head>
+    <body>
+        <h1>Formulir Entry Data</h1>
+        <form method="post" th:object="${mhs}" th:action="@{/tambah-data}">
+            <table>
+                <tr>
+                    <td>NIM</td>
+                    <td><input type="text" th:field="*{nim}" /></td>
+                </tr>
+                <tr>
+                    <td>NAMA</td>
+                    <td><input type="text" th:field="*{nama}" /></td>
+                </tr>
+                <tr>
+                    <td>JURUSAN</td>
+                    <td><input type="text" th:field="*{jurusan}" /></td>
+                </tr>
+            </table>
+            <button type="submit">Simpan</button>
+        </form>
+    </body>
+</html>

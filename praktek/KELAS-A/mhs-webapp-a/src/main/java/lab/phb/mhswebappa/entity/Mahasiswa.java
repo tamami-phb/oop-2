@@ -11,8 +11,10 @@ public class Mahasiswa {
     @Id
     @Getter @Setter
     private String nim;
+    
     @Getter @Setter
     private String nama;
+    
     @Getter @Setter
     private String jurusan;
     

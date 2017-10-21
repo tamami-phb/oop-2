@@ -1,20 +1,16 @@
-<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Daftar Mahasiswa</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
+        </head>
     <body>
-        <h1>DAFTAR MAHASISWA</h1>
-        <br />
+        <h1>Daftar Mahasiswa</h1>
         
         <table border="1">
             <thead>
                 <tr>
-                    <th>NIM</th>
-                    <th>NAMA</th>
-                    <th>JURUSAN</th>
+                    <td>NIM</td>
+                    <td>NAMA</td>
+                    <td>JURUSAN</td>
                 </tr>
             </thead>
             <tbody>
@@ -24,11 +20,6 @@
                     <td th:text="${mhs.jurusan}"></td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr>
-                    <td><a href="/tambah-data.html">Tambah</a></td>
-                </tr>
-            </tfoot>
         </table>
     </body>
 </html>
