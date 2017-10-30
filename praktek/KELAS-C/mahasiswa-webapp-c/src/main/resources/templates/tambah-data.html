@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Formulir Tambah Data</title>
+</head>
+<body>
+	<h1>Formulir Tambah Data</h1>
+
+	<form th:action="@{/tambah-data}" method="post"
+			th:object="${mhs}">
+		<table>
+			<tr>
+				<td>NIM</td>
+				<td><input type="text" th:field="*{nim}" /> </td>
+			</tr>
+			<tr>
+				<td>NAMA</td>
+				<td><input type="text" th:field="*{nama}" /></td>
+			</tr>
+			<tr>
+				<td>JURUSAN</td>
+				<td><input type="text" th:field="*{jurusan}" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button type="submit">Simpan</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

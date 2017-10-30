@@ -22,6 +22,9 @@
                     <td th:text="${mhs.nim}"></td>
                     <td th:text="${mhs.nama}"></td>
                     <td th:text="${mhs.jurusan}"></td>
+                    <!-- format request /hapus?nim={mhs.nim} -->
+                    <td><a th:href="@{/hapus(nim=${mhs.nim})}">Hapus</a></td>
+                    <td><a th:href="@{/ubah-data(nim=${mhs.nim})}">Ubah</a></td>
                 </tr>
             </tbody>
             <tfoot>

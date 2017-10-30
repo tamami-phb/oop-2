@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Formulir Ubah Data</title>
+    </head>
+    <body>
+        <h1>Formulir Ubah Data</h1>
+        <form method="post" th:object="${mhs}" th:action="@{/ubah-data}">
+            <table>
+                <tr>
+                    <td>NIM</td>
+                    <td><input type="text" th:field="*{nim}" /></td>
+                </tr>
+                <tr>
+                    <td>NAMA</td>
+                    <td><input type="text" th:field="*{nama}" /></td>
+                </tr>
+                <tr>
+                    <td>JURUSAN</td>
+                    <td><input type="text" th:field="*{jurusan}" /></td>
+                </tr>
+            </table>
+            <button type="submit">Simpan</button>
+        </form>
+    </body>
+</html>
